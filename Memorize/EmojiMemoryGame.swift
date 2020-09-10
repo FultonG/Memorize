@@ -19,7 +19,7 @@ class EmojiMemoryGame: ObservableObject {
     }
     
     
-    static func createMemoryGame(with theme: Theme) -> MemoryGame<String> {
+    private static func createMemoryGame(with theme: Theme) -> MemoryGame<String> {
         return MemoryGame<String>(numberOfPairsOfCards: theme.numberOfCards) { pairIndex in return theme.set[pairIndex] }
     }
     
